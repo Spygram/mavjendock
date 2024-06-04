@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  webapp:
+    image: spygram/mavjendock:latest
+    build:
+      context: '.'
+      dockerfile: Dockerfile
+    ports:
+      - 4000:8080
+    container_name: mvnjendock_app

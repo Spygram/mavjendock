@@ -1,6 +1,8 @@
 # Pull base image 
-From tomcat:9-jre9
+FROM tomcat:10.1.24-jre21-temurin-jammy
 
-# Maintainer 
-MAINTAINER "khalid.kifayat@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+WORKDIR /usr/local/tomcat/webapps
+
+COPY target/*.war ./mavjendock.war
+
+EXPOSE 8080
